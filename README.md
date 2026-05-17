@@ -1,5 +1,5 @@
 # InterFunItems
-Простой плагин на предметы FunTime
+Простой плагин на предметы FunTime для PocketMine-NG
 
 # Установка:
 Загрузите файл InterFunItems в папку plugins и все готово!
