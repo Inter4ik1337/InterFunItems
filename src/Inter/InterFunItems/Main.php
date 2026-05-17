@@ -73,9 +73,6 @@ class Main extends PluginBase implements Listener
                 $dezor->addEnchantment(new EnchantmentInstance(VanillaEnchantments::INFINITY(), 1));
                 $dezor->setLore([
                     " ",
-                    TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Каст: " . TextFormat::BLUE . "Звуковая волна",
-                    TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Радиус: " . TextFormat::BLUE . "10 блоков",
-                    " ",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Эффекты для противников: ",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Иссушение III (00:10)",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Замедление V (00:05)",
@@ -94,9 +91,6 @@ class Main extends PluginBase implements Listener
                 $zamorozka->getNamedTag()->setString("zamorozka", "true");
                 $zamorozka->setLore([
                     " ",
-                    TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Каст: " . TextFormat::BLUE . "Ледяная сфера",
-                    TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Радиус: " . TextFormat::BLUE . "7 блоков",
-                    " ",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Эффекты для противников: ",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Заморозка (00:01)",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Слабость (00:05)"
@@ -110,9 +104,6 @@ class Main extends PluginBase implements Listener
                 $fire = VanillaItems::FIRE_CHARGE();
                 $fire->getNamedTag()->setString("fire", "true");
                 $fire->setLore([
-                    " ",
-                    TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Каст: " . TextFormat::BLUE . "Огненная волна",
-                    TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Радиус: " . TextFormat::BLUE . "10 блоков",
                     " ",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Эффекты для противников: ",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Поджог (00:03)"
