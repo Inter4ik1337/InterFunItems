@@ -1,0 +1,11 @@
+name: InterFunItems
+version: 1.0.0
+api: 5.0.0
+main: Inter\InterFunItems\Main
+commands:
+  funitems:
+    description: Выдать предметы фантайм
+    permission: interfunitems.command
+permissions:
+  interfunitems.command:
+    default: op
