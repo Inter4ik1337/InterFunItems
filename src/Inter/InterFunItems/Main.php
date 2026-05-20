@@ -78,7 +78,10 @@ class Main extends PluginBase implements Listener
                     TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Замедление V (00:05)",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Утомление V (00:05)",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Слепота (00:03)",
-                    TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Тошнота (00:03)"
+                    TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Тошнота (00:03)",
+                    " ",
+                    TextFormat::RESET . TextFormat::GRAY . "Чем ближе цель, тем",
+                    TextFormat::RESET . TextFormat::GRAY . "Дольше продолжительность эффектов"
                 ]);
                 if ($count > 16) {
                     $count = 16;
@@ -106,7 +109,10 @@ class Main extends PluginBase implements Listener
                 $fire->setLore([
                     " ",
                     TextFormat::RESET . TextFormat::DARK_GRAY . "* " .TextFormat::GRAY . "Эффекты для противников: ",
-                    TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Поджог (00:03)"
+                    TextFormat::RESET . TextFormat::DARK_GRAY . "- " . TextFormat::RED . "Поджог (00:03)",
+                    " ",
+                    TextFormat::RESET . TextFormat::GRAY . "Чем ближе цель, тем",
+                    TextFormat::RESET . TextFormat::GRAY . "Дольше продолжительность эффектов"
                 ]);
                 $fire->setCustomName(TextFormat::RESET . TextFormat::DARK_RED . "[*] Огненный смерч");
                 $fire->addEnchantment(new EnchantmentInstance(VanillaEnchantments::INFINITY(), 1));

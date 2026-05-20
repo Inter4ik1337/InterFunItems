@@ -30,7 +30,19 @@ class fire implements Listener
 
             foreach ($world->getNearbyEntities($player->getBoundingBox()->expandedCopy(10, 10, 10)) as $entity) {
                 if ($entity instanceof Player && $entity->getId() !== $player->getId()) {
-                    $entity->setOnFire(3);
+                    $radius = $player->getPosition()->distance($entity->getPosition());
+                    if ($radius <= 2) {
+                        $entity->setOnFire(6);
+                    }
+                    elseif ($radius <= 3) {
+                        $entity->setOnFire(5);
+                    }
+                    elseif ($radius <= 5) {
+                        $entity->setOnFire(4);
+                    }
+                    else {
+                        $entity->setOnFire(3);
+                    }
                     $entity->sendMessage(TextFormat::RED . "Вас поджог " . $playername);
                 }
             }

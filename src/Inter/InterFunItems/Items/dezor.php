@@ -31,11 +31,34 @@ class dezor implements Listener
 
             foreach ($world->getNearbyEntities($player->getBoundingBox()->expandedCopy(10, 10, 10)) as $entity) {
                 if ($entity instanceof Player && $entity->getId() !== $player->getId()) {
-                    $slowness = new EffectInstance(VanillaEffects::SLOWNESS(), 5 * 20, 4, true);
-                    $slepota = new EffectInstance(VanillaEffects::DARKNESS(), 3 * 20, 0, true);
-                    $nausea = new EffectInstance(VanillaEffects::NAUSEA(), 3 * 20, 0, true);
-                    $issusenie = new EffectInstance(VanillaEffects::WITHER(), 10 * 20, 2, true);
-                    $utomlenie = new EffectInstance(VanillaEffects::MINING_FATIGUE(), 5 * 20, 4, true);
+                    $radius = $player->getPosition()->distance($entity->getPosition());
+
+                    if ($radius <= 2) {
+                        $slowness = new EffectInstance(VanillaEffects::SLOWNESS(), 8 * 20, 4, true);
+                        $slepota = new EffectInstance(VanillaEffects::DARKNESS(), 6 * 20, 0, true);
+                        $nausea = new EffectInstance(VanillaEffects::NAUSEA(), 6 * 20, 0, true);
+                        $issusenie = new EffectInstance(VanillaEffects::WITHER(), 13 * 20, 2, true);
+                        $utomlenie = new EffectInstance(VanillaEffects::MINING_FATIGUE(), 8 * 20, 4, true);
+                    } elseif ($radius <= 3) {
+                        $slowness = new EffectInstance(VanillaEffects::SLOWNESS(), 7 * 20, 4, true);
+                        $slepota = new EffectInstance(VanillaEffects::DARKNESS(), 5 * 20, 0, true);
+                        $nausea = new EffectInstance(VanillaEffects::NAUSEA(), 5 * 20, 0, true);
+                        $issusenie = new EffectInstance(VanillaEffects::WITHER(), 12 * 20, 2, true);
+                        $utomlenie = new EffectInstance(VanillaEffects::MINING_FATIGUE(), 7 * 20, 4, true);
+                    } elseif ($radius <= 5) {
+                        $slowness = new EffectInstance(VanillaEffects::SLOWNESS(), 6 * 20, 4, true);
+                        $slepota = new EffectInstance(VanillaEffects::DARKNESS(), 4 * 20, 0, true);
+                        $nausea = new EffectInstance(VanillaEffects::NAUSEA(), 4 * 20, 0, true);
+                        $issusenie = new EffectInstance(VanillaEffects::WITHER(), 11 * 20, 2, true);
+                        $utomlenie = new EffectInstance(VanillaEffects::MINING_FATIGUE(), 6 * 20, 4, true);
+                    } else {
+                        $slowness = new EffectInstance(VanillaEffects::SLOWNESS(), 5 * 20, 4, true);
+                        $slepota = new EffectInstance(VanillaEffects::DARKNESS(), 3 * 20, 0, true);
+                        $nausea = new EffectInstance(VanillaEffects::NAUSEA(), 3 * 20, 0, true);
+                        $issusenie = new EffectInstance(VanillaEffects::WITHER(), 10 * 20, 2, true);
+                        $utomlenie = new EffectInstance(VanillaEffects::MINING_FATIGUE(), 5 * 20, 4, true);
+                    }
+
                     $entity->getEffects()->add($slowness);
                     $entity->getEffects()->add($nausea);
                     $entity->getEffects()->add($slepota);
